@@ -31,17 +31,18 @@ $ chmod a+x ~/.bin/repo
 
 ### Initializing Repo ###
 
-```bash
 # Create a directory for the source files
 # You can name this directory however you want, just remember to replace
 # WORKSPACE with your directory for the rest of this guide.
 # This can be located anywhere (as long as the fs is case-sensitive)
-$ mkdir WORKSPACE
-$ cd WORKSPACE
-
+```bash
+mkdir WORKSPACE
+cd WORKSPACE
+```
 # Install Repo in the created directory
 # Use a real name/email combination, if you intend to submit patches
-$ repo init -u https://github.com/AOSPA/manifest -b beryl
+```bash
+repo init -u https://github.com/clo-oscaro/aospa_manifest.git -b beryl --git-lfs --depth=1
 ```
 
 ### Downloading the source tree ###
@@ -51,12 +52,7 @@ first run, it is expected to take a while as it will download all the required A
 and their change histories.
 
 ```bash
-# Let Repo take care of all the hard work
-#
-# The -j# option specifies the number of concurrent download threads to run.
-# 4 threads is a good number for most internet connections.
-# You may need to adjust this value if you have a particularly slow connection.
-$ repo sync --current-branch --no-tags -j4
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```
 
 #### Syncing specific projects ####

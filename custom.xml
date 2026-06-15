@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024 Paranoid Android
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest>
+  <project path="vendor/qcom/opensource/audio-hal/primary-hal" name="android_hardware_qcom_audio" remote="custom" revision="beryl" />
+  <project path="hardware/qcom/media" name="android_hardware_qcom_media" remote="custom" revision="beryl" />
+  <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="custom" revision="beryl-888" />
+  <remove-project name="platform/hardware/qcom/wlan" />
+  <project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" remote="custom" revision="beryl" />
+  <remove-project name="device/qcom/common" />
+  <project path="device/qcom/common" name="android_device_qcom_common" remote="custom" revision="beryl" />
+  <project path="vendor/qcom/common" name="proprietary_vendor_qcom_common" remote="custom" revision="beryl" />
+  <project path="vendor/aospa" name="android_vendor_aospa" remote="custom" >
+    <linkfile src="build.sh" dest="rom-build.sh" />
+  </project>
+</manifest>

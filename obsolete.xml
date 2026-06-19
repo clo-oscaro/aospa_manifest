@@ -22,7 +22,7 @@
 
   <!-- Hardware -->
   <remove-project name="platform/hardware/qcom/gps" />
-  <remove-project name="platform/hardware/qcom/media" />
+
 
   <!-- Kernel -->
   <remove-project name="meta-qti-touch" />

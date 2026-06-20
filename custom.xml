@@ -16,4 +16,6 @@
   <project path="vendor/aospa" name="android_vendor_aospa" remote="custom" revision="beryl" >
     <linkfile src="build.sh" dest="rom-build.sh" />
   </project>
+  <remove-project name="platform/hardware/qcom/gps" />
+  <project path="hardware/qcom/gps" name="android_hardware_qcom_gps" remote="custom" revision="vauxite-888" />
 </manifest>

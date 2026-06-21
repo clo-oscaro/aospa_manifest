@@ -20,9 +20,6 @@
   <remove-project name="device/qcom/qssi_32go"/>
   <remove-project name="device/sample"/>
 
-  <!-- Hardware -->
-  <remove-project name="platform/hardware/qcom/gps" />
-
 
   <!-- Kernel -->
   <remove-project name="meta-qti-touch" />
